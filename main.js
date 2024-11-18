@@ -4,32 +4,50 @@
 
 // let secondLi = list[0];
 
-let changeColor = document.getElementsByTagName('li')
+// let changeColor = document.getElementsByTagName('li')
 
-let listCount = changeColor.length
+// let listCount = changeColor.length
 
-let secondLi = changeColor[1]
+// let secondLi = changeColor[1]
 
-secondLi.textContent = "thats a new text"
-
-
-console.log(secondLi)
+// secondLi.textContent = "thats a new text"
 
 
-let divColor = document.querySelector('.test')
-
-divColor.style.color = 'blue'
+// console.log(secondLi)
 
 
+// let divColor = document.querySelector('.test')
 
-const btnTest = document.getElementById('button')
-const inputField = document.querySelector('input')
+// divColor.style.color = 'blue'
 
 
-function pushToConsole() {
-  console.log(inputField.value)
+
+// const btnTest = document.getElementById('button')
+// const inputField = document.querySelector('input')
+
+
+// function pushToConsole() {
+//   console.log(inputField.value)
+// }
+
+// btnTest.addEventListener('click', pushToConsole)
+
+
+
+const tableContainer = document.getElementById('multiplication-table')
+
+const table = document.createElement('table')
+tableContainer.appendChild(table)
+
+for (let i = 1; i <= 10; i++) {
+  const row = document.createElement('tr')
+  for (let j = 1; j <= 10; j++) {
+    const cell = document.createElement('td')
+    cell.textContent = i * j
+    row.appendChild(cell)
+  }
+  table.appendChild(row)
 }
 
-btnTest.addEventListener('click', pushToConsole)
 
-
+// console.log('hel')
