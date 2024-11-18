@@ -33,3 +33,17 @@
 // btnTest.addEventListener('click', pushToConsole)
 
 
+function showRandomImg() {
+  const randomNum = Math.floor(Math.random() *5) + 1
+
+  const imageWay = `img/${randomNum}.jpg`
+
+  const imgElem = document.getElementById('randomimg')
+  imgElem.src = imageWay;
+}
+
+showRandomImg()
+
+document.getElementById('randomBtn').addEventListener('click', showRandomImg)
+
+
