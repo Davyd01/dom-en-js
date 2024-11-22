@@ -33,3 +33,9 @@
 // btnTest.addEventListener('click', pushToConsole)
 
 
+const divBtn = document.getElementById('container-btn').addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON') {
+    alert (`you have pressed on: ${event.target.textContent}`)
+  }
+})
+
