@@ -33,3 +33,34 @@
 // btnTest.addEventListener('click', pushToConsole)
 
 
+let savedLink = '';
+
+document.getElementById('set-link').addEventListener('click', function() {
+  let userUrl = prompt("enter a link")
+
+
+if (userUrl === null || userUrl.trim() === '') {
+  alert ('no links has been saved')
+  return
+}
+if (userUrl.startsWith("http://") || userUrl.startsWith("https://")) {
+  savedLink = userUrl
+  alert ('link has been saved successfuly')
+} else {
+  alert('The link must start with "http://" or "https://"')
+}
+})
+
+
+document.getElementById('redirect').addEventListener('click', function() {
+  if (savedLink) {
+    window.location.href = savedLink
+  } else {
+    alert ('no link has been saved, please set a link first')
+  }
+})
+
+
+
+
+
