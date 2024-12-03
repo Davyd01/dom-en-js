@@ -1,0 +1,110 @@
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Каждый отдельный слайд */
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Изображение внутри слайда */
+.slide img {
+  border-radius: 10px;
+}
+
+/* Информация о слайде */
+.slide-info {
+  margin-left: 20px;
+}
+
+.slide-info h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.slide-info p {
+  font-size: 18px;
+  color: #555;
+}
+
+.slide-info span {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Кнопки навигации */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: #0056b3;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Навигационные точки */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+.dot:hover {
+  background-color: #0056b3;
+}
