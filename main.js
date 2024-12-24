@@ -8,7 +8,11 @@ async function fetchWeatherData() {
       throw Error(`HTTP error! status: ${response.status}`)
     }
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
+
+    const date = new Date(); 
+    document.getElementById('update-time').textContent = `Last updated: ${date.toLocaleString()}`;
+
 
     document.getElementById('city-name').textContent = data.name
     document.getElementById('temperature').textContent = `Temperature: ${data.main.temp.toFixed(0)} °C`
